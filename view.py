@@ -4,8 +4,9 @@ from werkzeug.exceptions import MethodNotAllowed, BadRequest, InternalServerErro
 from peewee import IntegrityError
 from app import app
 from conf import PER_PAGE_NUM
-import json
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 @app.route("/", methods=['GET'])
 @app.route("/blogs", methods=['GET'])
