@@ -5,8 +5,10 @@ from peewee import IntegrityError
 from app import app
 from conf import PER_PAGE_NUM
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf8')
+
 
 @app.route("/", methods=['GET'])
 @app.route("/blogs", methods=['GET'])
@@ -57,7 +59,7 @@ def json_edit_blog():
         return MethodNotAllowed
     post_id = request.form.get("post_id")
     try:
-        post = Post.get(Post.id==post_id)
+        post = Post.get(Post.id == post_id)
     except Exception as e:
         return jsonify({"status": 500})
     return jsonify({"status": 200, "data": post.to_json()})
@@ -77,7 +79,7 @@ def json_editdone_blog():
     title = request.form.get("title")
     labels = request.form.get("labels")
     try:
-        post = Post.get(Post.id==int(post_id))
+        post = Post.get(Post.id == int(post_id))
         post.title = title
         post.content = content
         post.save()

@@ -93,7 +93,7 @@
                      alt="Author image" nopin="nopin"/>
                 <a href="/author/daniel/">Stanley Huang</a>
 
-                <time class="post-date" datetime="2015-03-25">25 March 2015</time>
+                <time class="post-date" datetime="2015-03-25">{{ post.format_date() }}</time>
                 {% for label in post.get_labels() %}
                 {{ label.text }}
                 {% endfor %}

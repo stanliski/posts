@@ -21,6 +21,7 @@ TRASH_STATUS = 2
 # persist information
 datebase = SqliteDatabase(dburl)
 
+
 class BaseModel(Model):
     """
     model definitions -- the standard "pattern" is to define a base model class
@@ -112,6 +113,10 @@ class Post(BaseModel):
             return brief[0:250]
         else:
             return brief
+
+    def format_date(self):
+        # return self.timestamp.now().strftime('%b-%d-%y %H:%M:%S')
+        return self.timestamp.strftime('%b %d, 20%y')
 
     def to_json(self):
         return {"title": self.title, "content": self.content, "timestamp": self.timestamp, "status": self.status,
