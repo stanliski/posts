@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+
+.container {
+    margin-left: 27%;
+    margin-right: 27%;
+    padding: 100px 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 25px;
+}
+
+.label {
+    text-align: center;
+    display: block;
+    color: #9EABB3;
+    font-size: 14px;
+}
+
+.date {
+    padding-right: 15px;
+}
+
+.label a {
+    border: 1.4px solid #9EABB3;
+    padding: 2px 8px;
+    color: #9EABB3;
+    border-radius: 3px;
+    margin-left: 2px;
+    text-decoration: none;
+}
+
+.label a:hover {
+    text-decoration: underline;
+    color: black;
+    border: 1.4px solid black;
+}
+
+.share {
+    margin-top: 100px;
+    display: block;
+    text-align: right;
+}
+
+.share-sites {
+    color: #9EABB3;
+    text-align: right;
+    margin-right: 13px;
+    display: block;
+}
+
+.share-sites i:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.back-button {
+    box-sizing: border-box;
+    /*border: 1.4px solid #9EABB3;*/
+    display: inline-block;
+    float: left;
+    width: 150px;
+    height: 100px;
+    padding: 30px 40px;
+    border: transparent 1px solid;
+    color: #9EABB3;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 35px;
+    border-radius: 3px;
+    transition: all ease 0.3s;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.back-button span {
+    margin-left: 10px;
+}
+
+.content {
+    margin-top: 30px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+}
+
+.h1 {
+    text-transform: none;
+    color: #444;
+    letter-spacing: -.02em;
+    font-size: 69px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   10. Footer - The bottom of every page
+   ========================================================================== */
+
+.site-footer {
+    position: relative;
+    margin: 8rem 0 0 0;
+    padding: 1rem 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.75em;
+    color: #BBC7CC;
+}
+
+.site-footer a {
+    color: #BBC7CC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-footer a:hover {
+    border-bottom: #bbc7cc 1px solid;
+}
+
+.poweredby {
+    font-size: 12px;
+    display: block;
+    width: 45%;
+    float: right;
+    text-align: right;
+}
+
+.copyright {
+    font-size: 10px;
+    display: block;
+    width: 45%;
+    float: left;
+}

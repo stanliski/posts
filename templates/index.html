@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>Looking forward to change - Page 2</title>
+    <meta name="description" content=""/>
+
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="shortcut icon" href="/static/img/ghosticon.jpg">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/screen.css?v=a5427482e1"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400"/>
+
+    <link rel="canonical" href="http://changetoyoururl.daoapp.io/page/2/"/>
+    <link rel="prev" href="http://changetoyoururl.daoapp.io/"/>
+    <link rel="next" href="http://changetoyoururl.daoapp.io/page/3/"/>
+    <meta name="generator" content="Ghost 0.6"/>
+    <link rel="alternate" type="application/rss+xml" title="Looking forward to change"
+          href="http://changetoyoururl.daoapp.io/rss/"/>
+</head>
+<body class="paged archive-template nav-closed">
+
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        {% for label in labels %}
+        <li class="nav-home" role="presentation"><a href="/{{ label.text }}/posts/1">{{ label.text }}</a></li>
+        {% endfor %}
+    </ul>
+    <a class="subscribe-button icon-feed" href="http://changetoyoururl.daoapp.io/rss/">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+<div class="site-wrapper">
+
+
+    <header class="main-header no-cover">
+        <nav class="main-nav overlay clearfix">
+
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        </nav>
+        <div class="vertical">
+            <div class="main-header-content inner">
+                <h1 class="page-title">Looking forward to change</h1>
+                <h2 class="page-description">Thoughts, stories and ideas.</h2>
+            </div>
+        </div>
+        <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    </header>
+
+    <main id="content" class="content" role="main">
+
+        <div class="extra-pagination inner">
+            <nav class="pagination" role="navigation">
+                {% if page > 1 %}
+                <a class="newer-posts" href="blogs?page={{ page-1 }}">&larr; Newer Posts</a>
+                {%  endif %}
+                <span class="page-number">Page {{ page }} of {{ total }}</span>
+                {% if page < total %}
+                <a class="older-posts" href="blogs?page={{ page+1 }}">Older Posts &rarr;</a>
+                {% endif %}
+            </nav>
+        </div>
+        {% for post in posts %}
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="blogs/{{ post.id }}">{{
+                    post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt">
+                <p>
+                    {{ post.get_brief() }}
+                </p>
+            </section>
+            <footer class="post-meta">
+                <img class="author-thumb" src="/static/img/touxiang.jpg"
+                     alt="Author image" nopin="nopin"/>
+                <a href="/author/daniel/">Stanley Huang</a>
+
+                <time class="post-date" datetime="2015-03-25">25 March 2015</time>
+            </footer>
+        </article>
+        {% endfor %}
+        <nav class="pagination" role="navigation">
+            {% if page > 1 %}
+            <a class="newer-posts" href="blogs?page={{ page-1 }}">
+                &larr; Newer Posts
+            </a>
+            {% endif %}
+            <span class="page-number">Page {{ page }} of {{ total }}</span>
+            {% if page < total %}
+            <a class="older-posts" href="blogs?page={{ page+1 }}">Older Posts &rarr;</a>
+            {% endif %}
+        </nav>
+
+    </main>
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="#">Looking forward to change</a> &copy; 2016
+        </section>
+        <section class="poweredby">Proudly published with <a href="#">Ghost</a></section>
+    </footer>
+
+</div>
+
+<script src="/static/js/jquery.min.js?v=a5427482e1"></script>
+<script type="text/javascript" src="/static/js/jquery.fitvids.js?v=a5427482e1"></script>
+<script type="text/javascript" src="/static/js/index.js?v=a5427482e1"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+    <title>{{ post.title }}</title>
+    <meta name="description" content=""/>
+    <link rel="shortcut icon" href="/static/img/ghosticon.jpg">
+    <link rel="stylesheet" href="/static/css/post.css"/>
+    <link rel="stylesheet" href="/static/css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/editormd.css">
+</head>
+<body>
+<nav>
+    <a class="back-button" href="/">
+        <i class="fa fa-angle-left fa-lg" aria-hidden="true"></i> <span> Home </span>
+    </a>
+</nav>
+<div class="container">
+    <div class="title">
+        <h1>
+            {{ post.title }}
+        </h1>
+    </div>
+    <div class="label">
+        <!--<i class="fa fa-tags fa-lg" aria-hidden="true"> </i>-->
+        <span class="date">十一月 24, 2015</span>
+        {% for label in post.get_labels() %}
+        <a href="/{{ label.text }}/posts/1">{{ label.text }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="content" id="editormd-view">
+       <textarea id="append-test" style="display:none;">
+           {{ post.content }}
+       </textarea>
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/lib/marked.min.js"></script>
+    <script src="/static/lib/prettify.min.js"></script>
+
+    <script src="/static/lib/raphael.min.js"></script>
+    <script src="/static/lib/underscore.min.js"></script>
+    <script src="/static/lib/sequence-diagram.min.js"></script>
+    <script src="/static/lib/flowchart.min.js"></script>
+    <script src="/static/lib/jquery.flowchart.min.js"></script>
+
+    <script src="/static/js/editormd.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var editormdView;
+            editormdView = editormd.markdownToHTML("editormd-view", {
+                htmlDecode: "style,script,iframe",  // you can filter tags decode
+                emoji: true,
+                taskList: true,
+                tex: true,  // 默认不解析
+                flowChart: true,  // 默认不解析
+                sequenceDiagram: true,  // 默认不解析
+            });
+        });
+
+
+
+    </script>
+    <div class="share">
+        <h4>Share this post</h4>
+        <div class="share-sites">
+            <i class="fa fa-weixin fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-weibo fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+<footer class="site-footer clearfix">
+    <section class="copyright"><a href="#">Looking forward to change</a> &copy; 2016
+    </section>
+    <section class="poweredby">Proudly published with <a href="#">Ghost</a></section>
+</footer>
+</body>
+</html>
